@@ -1,15 +1,15 @@
-import DisplayMood from './components/DisplayMood/DisplayMood';
 import MoodList from './components/MoodList/MoodList';
+import DisplayMood from './components/DisplayMood/DisplayMood';
+
 import React, { useState } from 'react';
 
-const [currentMood, setMood] = useState('');
+export default function App() {
+  const [currentMood, setMood] = useState('');
 
-function App() {
   return (
     <div>
       <MoodList setMood={setMood} />
-      <DisplayMood mood={currentMood} />
+      <DisplayMood currentMood={currentMood} />
     </div>
   );
 }
-export default App;
